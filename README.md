@@ -1,7 +1,6 @@
 # teste-javascript
 Teste seu conhecimento em javascript, em 10 questões
 
-'''#Nwl-Rockeseat Aula 1
 
   JS
 
@@ -23,14 +22,3 @@ Objeto - {}
 
 <dl></dl> - Description list 
 <dt></dt> - Description term
-
-
-
-'''
-Aula 01 Terminada
-
-Aula 02 Terminada
-
-Aula 03 - Terminada
-
-Certificado: Confirmado
