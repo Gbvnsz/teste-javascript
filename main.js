@@ -107,7 +107,7 @@ const respostas = [
   const corretas = new Set()
   const totalDePerguntas = respostas.length
   const mostrarTotal = document.querySelector('#acertos span')
-  mostrarTotal.textContent = corretas.size + '  de  ' + totalDePerguntas
+  mostrarTotal.textContent = corretas.size + '   de   ' + totalDePerguntas
   
   //loop ou reptição
   for(const item of respostas) {
