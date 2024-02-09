@@ -1,0 +1,161 @@
+/*importar fonte de letras*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+/*se usa para resetar e definir uma regra que deve ser seguida*/
+*, :root{
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -moz-box-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: #0F172A;
+}
+
+header {
+  margin-top: 64px;
+  border-bottom: 1px solid #8C8C8C;
+  padding-bottom: 25px;
+}
+
+header h1 {
+  font-size: 30px;
+  /*cor da fonte*/
+  color: #f1f5f9;
+}
+
+#quiz {
+  counter-reset: quizitem;
+}
+
+.quizitem h3:before {
+  counter-increment: quizitem;
+  content: counter(quizitem);
+}
+
+/*caixa da pergunta*/
+.quizitem {
+  margin-top: 24px;
+  border: 1px solid #8C8C8C;
+  border-radius: 10px;
+
+  /*overflow que dizer transbordar*/
+  overflow: hidden; /*hidden quer dizer esconda*/
+}
+
+/*perguntas*/
+.quizitem h3 {
+  padding: 16px 20px;
+  /*cor fonte*/
+  color: #e2e8f0;
+  /*estilizar*/
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #a9a9a9;
+}
+
+/*alternativas */
+.quizitem dl {
+  padding: 20px 24px;
+  
+  /*se eu não tenho grid não tenho gap*/
+  display: grid;
+  gap: 10px;
+}
+
+/*estilização das alternativas*/
+.quizitem dl dt {
+  font-size: 15px;
+
+  /*peso da fonte ou seja a grossura da letra
+  font-weight: 400;*/
+
+  /*altura de linha entre eles*/
+  line-height: 24px;
+
+  /*espaço entre as letras*/
+  letter-spacing: 0;
+
+  /*display flex faz os dois ou mais elementos colarem um no outro*/
+  display: flex;
+
+  /*alinhas os items*/
+  align-items: center;
+
+  /*gap só funciona se usado o display*/
+  gap: 5px;
+
+  /*cor fonte*/
+  color: #e2e8f0;
+
+  /*não quero que haja deformação nas bolinahs, shrink quer dizer apertar*/
+  flex-shrink: 0;
+}
+
+/*bolinhas das alternativas*/
+input {
+  all: unset;
+  border: 1px solid;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  /*o display inline faz ficar em linha
+  display: inline-flex;*/
+
+  /*display do before*/
+  display: flex;
+  /*alinhas a bolinha do before*/
+  /*eixo x*/
+  align-items: center;
+  /*eixo y*/
+  justify-content: center;
+
+  /*não quero que haja deformação nas bolinahs, shrink quer dizer apertar*/
+  flex-shrink: 0;
+}
+
+/*quando clico nele*/
+input:checked {
+  border: 1px solid #8C8C8C;
+}
+
+/*before é usado para criar um conteúdo antes do meu conteúdo já estabelecido*/
+input:checked:before {
+  content: "";
+
+  /*criendo o conteúdo de dentro*/
+  background-color: #13293D;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+/*conteúdo principal da página*/
+main {
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto 60px;
+}
+
+/*numero de acertos*/
+#acertos {
+  /*cor e lugar da string*/
+  background-color: #a9a9a9;
+  text-align: center;
+
+  /*posição */
+  bottom: 0;
+  position: fixed;
+  left: 0;
+
+  /*caixa */
+  width: 100%;
+  padding: 12px;
+}
